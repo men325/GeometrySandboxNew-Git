@@ -1,0 +1,3 @@
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\Definitions.GeometrySandboxNew.h
+C:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

@@ -1,0 +1,7 @@
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\Definitions.GeometrySandboxNew.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Source\GeometrySandboxNew\GeometrySandboxNewGameModeBase.h
+C:\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandboxNew\GeometrySandboxNewGameModeBase.generated.h

@@ -1,0 +1,2 @@
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\Definitions.GeometrySandboxNew.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Source\GeometrySandboxNew\GeometrySandboxNew.h
