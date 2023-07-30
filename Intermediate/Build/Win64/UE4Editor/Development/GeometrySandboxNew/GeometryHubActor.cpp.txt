@@ -1,0 +1,5 @@
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\Definitions.GeometrySandboxNew.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Source\GeometrySandboxNew\Public\GeometryHubActor.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Source\GeometrySandboxNew\Public\BaseGeometryActor.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandboxNew\BaseGeometryActor.generated.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandboxNew\GeometryHubActor.generated.h

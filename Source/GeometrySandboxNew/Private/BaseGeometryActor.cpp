@@ -4,6 +4,7 @@
 #include "BaseGeometryActor.h"
 #include "Engine/Engine.h"
 #include "Materials/MaterialInstanceDynamic.h"
+#include "TimerManager.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogBaseGeometry, All, All)
 
@@ -29,6 +30,14 @@ void ABaseGeometryActor::BeginPlay()
     //PrintTransform();
 
     SetColor(GeometryData.Color);
+
+    GetWorldTimerManager().SetTimer(TimerHandle, this, &ABaseGeometryActor::OnTimerFired, GeometryData.TimerRate, true);
+}
+
+void ABaseGeometryActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+{
+    UE_LOG(LogBaseGeometry, Error, TEXT("Actor is dead %s"), *GetName());
+    Super::EndPlay(EndPlayReason);
 }
 
 // Called every frame
@@ -48,9 +57,12 @@ void ABaseGeometryActor::HandleMovement()
     {
         // z = z0 + amplitude * sin(freq * t);
         FVector CurrentLocation = GetActorLocation();
+        if(GetWorld())
+        { 
         float Time = GetWorld()->GetTimeSeconds();
         CurrentLocation.Z = InitialLocation.Z + GeometryData.Amplitude * FMath::Sin(GeometryData.Frequency * Time);
         SetActorLocation(CurrentLocation);
+        }
     }
     break;
     case EMovementType::Static: break;
@@ -60,10 +72,28 @@ void ABaseGeometryActor::HandleMovement()
 
 void ABaseGeometryActor::SetColor(const FLinearColor& Color)
 {
+    if (!BaseMesh) return;
     UMaterialInstanceDynamic* DynMaterial = BaseMesh->CreateAndSetMaterialInstanceDynamic(0);
     if (DynMaterial)
     {
         DynMaterial->SetVectorParameterValue("Color", Color);
+    }
+}
+
+void ABaseGeometryActor::OnTimerFired()
+{
+    if (++TimerCount <= MaxTimerCount)
+    {
+        const FLinearColor NewColor = FLinearColor::MakeRandomColor();
+        UE_LOG(LogBaseGeometry, Display, TEXT("TimerCount: %i, Color to set up: %s"), TimerCount, *NewColor.ToString());
+        SetColor(NewColor);
+        OnColorChanged.Broadcast(NewColor, GetName());
+    }
+    else
+    {
+        UE_LOG(LogBaseGeometry, Warning, TEXT("Timer has been stopped!"));
+        GetWorldTimerManager().ClearTimer(TimerHandle);
+        OnTimerFinished.Broadcast(this);
     }
 }
 
@@ -74,6 +104,7 @@ void ABaseGeometryActor::PrintTypes()
     UE_LOG(LogTemp, Display, TEXT("Health: %.2f"), Health);
     UE_LOG(LogTemp, Display, TEXT("IsDead: %d"), IsDead);
     UE_LOG(LogTemp, Display, TEXT("HasWeapon: %d"), static_cast<int>(HasWeapon));
+    
 }
 
 void ABaseGeometryActor::PrintStringTypes()
@@ -88,8 +119,10 @@ void ABaseGeometryActor::PrintStringTypes()
 
     FString Stat = FString::Printf(TEXT(" \n == All Stat == \n %s \n %s \n %s "), *WeaponsNumStr, *HealthStr, *IsDeadStr);
     UE_LOG(LogBaseGeometry, Warning, TEXT("%s"), *Stat);
+    if(GEngine){
     GEngine->AddOnScreenDebugMessage(-1, 3.0f, FColor::Red, Name);
     GEngine->AddOnScreenDebugMessage(-1, 5.0f, FColor::Green, Stat, true, FVector2D(1.5f, 1.5f));
+    }
 }
 
 void ABaseGeometryActor::PrintTransform() 

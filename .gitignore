@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+Intermediate/Build/Win64/ActionHistory.bin
+*.dll
+*.dll
+*.ini

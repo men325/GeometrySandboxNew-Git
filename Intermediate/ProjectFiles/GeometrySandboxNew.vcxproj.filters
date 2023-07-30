@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\GeometrySandboxNew.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{C3519A5A-4FBC-494A-B064-9B6BE7741B37}</UniqueIdentifier>
+      <UniqueIdentifier>{2ABA7C06-E0CF-4ED9-BE70-BE5D9B388B96}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GeometrySandboxNew.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,10 @@
     <None Include="..\..\Source\GeometrySandboxNewEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{FDC7CB1C-F4C8-4170-823E-13019E91671A}</UniqueIdentifier>
+      <UniqueIdentifier>{6B272648-E65D-429B-A20D-E2B1724284D0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +26,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\GeometrySandboxNew">
-      <UniqueIdentifier>{12FA1425-ACAD-42CB-83F1-08BBB963249C}</UniqueIdentifier>
+      <UniqueIdentifier>{5F14A484-D58D-4D41-A125-CC541FB4287F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\GeometrySandboxNew\GeometrySandboxNew.Build.cs">
       <Filter>Source\GeometrySandboxNew</Filter>
@@ -42,15 +44,21 @@
       <Filter>Source\GeometrySandboxNew</Filter>
     </ClInclude>
     <Filter Include="Source\GeometrySandboxNew\Private">
-      <UniqueIdentifier>{84411381-5669-49CC-9022-0437DDE22055}</UniqueIdentifier>
+      <UniqueIdentifier>{E84F2CC4-82EF-4E88-A4DE-895089C89CA7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\GeometrySandboxNew\Private\BaseGeometryActor.cpp">
       <Filter>Source\GeometrySandboxNew\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\GeometrySandboxNew\Private\GeometryHubActor.cpp">
+      <Filter>Source\GeometrySandboxNew\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\GeometrySandboxNew\Public">
-      <UniqueIdentifier>{D8B31072-37BA-4CCB-A63E-0F158EC7597D}</UniqueIdentifier>
+      <UniqueIdentifier>{55BDFA7E-232E-444E-A537-FCE79638A8B2}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\GeometrySandboxNew\Public\BaseGeometryActor.h">
+      <Filter>Source\GeometrySandboxNew\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GeometrySandboxNew\Public\GeometryHubActor.h">
       <Filter>Source\GeometrySandboxNew\Public</Filter>
     </ClInclude>
   </ItemGroup>

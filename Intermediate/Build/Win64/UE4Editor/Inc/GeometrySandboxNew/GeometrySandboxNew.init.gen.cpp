@@ -11,18 +11,22 @@
 #endif
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeGeometrySandboxNew_init() {}
+	GEOMETRYSANDBOXNEW_API UFunction* Z_Construct_UDelegateFunction_GeometrySandboxNew_OnColorChanged__DelegateSignature();
 	UPackage* Z_Construct_UPackage__Script_GeometrySandboxNew()
 	{
 		static UPackage* ReturnPackage = nullptr;
 		if (!ReturnPackage)
 		{
+			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_GeometrySandboxNew_OnColorChanged__DelegateSignature,
+			};
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/GeometrySandboxNew",
-				nullptr,
-				0,
+				SingletonFuncArray,
+				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xA1FF867D,
-				0x7A887AEB,
+				0x18B84234,
+				0x5C965A5D,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

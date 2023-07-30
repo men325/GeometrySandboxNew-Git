@@ -8,6 +8,9 @@
 
 #include "BaseGeometryActor.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams(FOnColorChanged, const FLinearColor&, Color, const FString&, Name);
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnTimerFinished, AActor*);
+
 UENUM(BlueprintType)
 enum class EMovementType : uint8
 {
@@ -20,20 +23,22 @@ struct FGeometryData
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 		float Amplitude = 50.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 		float Frequency = 2.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Movement")
-	
-	EMovementType MoveType = EMovementType::Static;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+		EMovementType MoveType = EMovementType::Static;
 
-	UPROPERTY(EditAnywhere, Category = "Design")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Design")
 		FLinearColor Color = FLinearColor::Black;
 
+	UPROPERTY(EditAnywhere, Category = "Design")
+		float TimerRate = 3.0f;
 };
+
 
 UCLASS()
 class GEOMETRYSANDBOXNEW_API ABaseGeometryActor : public AActor
@@ -46,10 +51,21 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* BaseMesh;
+	void SetGeometryData(const FGeometryData& Data) { GeometryData = Data; }
+
+	UFUNCTION(BlueprintCallable)
+		FGeometryData GetGeometryData() const { return GeometryData; }
+	
+	UPROPERTY(BlueprintAssignable)
+		FOnColorChanged OnColorChanged;
+	
+	FOnTimerFinished OnTimerFinished;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
 	
 	UPROPERTY(EditAnywhere, Category = "GeometryData")
 		FGeometryData GeometryData;
@@ -74,6 +90,10 @@ public:
 
 private:
 	FVector InitialLocation;
+	FTimerHandle TimerHandle;
+
+	const int32 MaxTimerCount = 5;
+	int32 TimerCount = 0;
 
 	void PrintTypes();
 	void PrintStringTypes();
@@ -81,6 +101,7 @@ private:
 	void HandleMovement();
 
 	void SetColor(const FLinearColor& Color);
-
+	
+	void OnTimerFired();
 
 };
