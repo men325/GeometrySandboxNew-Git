@@ -10,6 +10,7 @@
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\BaseGeometryActor.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\GeometryHubActor.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\SandboxPawn.cpp.obj"
+"C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\SandboxPlayerController.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\GeometrySandboxNew.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\GeometrySandboxNewGameModeBase.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\BaseGeometryActor.gen.cpp.obj"
@@ -17,6 +18,7 @@
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\GeometrySandboxNew.init.gen.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\GeometrySandboxNewGameModeBase.gen.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\SandboxPawn.gen.cpp.obj"
+"C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\SandboxPlayerController.gen.cpp.obj"
 "C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\Default.rc2.res"
 /OUT:"C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Development\GeometrySandboxNew\UE4Editor-GeometrySandboxNew.lib"
 /INCLUDE:IMPLEMENT_MODULE_GeometrySandboxNew
