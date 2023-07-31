@@ -5,3 +5,5 @@ C:\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
 C:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
 C:\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
 C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandboxNew\GeometrySandboxNewGameModeBase.generated.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Source\GeometrySandboxNew\Public\SandboxPawn.h
+C:\Users\Asus\Documents\Unreal Projects\GeometrySandboxNew\Intermediate\Build\Win64\UE4Editor\Inc\GeometrySandboxNew\SandboxPawn.generated.h

@@ -39,7 +39,7 @@ void ABaseGeometryActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
     UE_LOG(LogBaseGeometry, Error, TEXT("Actor is dead %s"), *GetName());
     Super::EndPlay(EndPlayReason);
 }
-
+ 
 // Called every frame
 void ABaseGeometryActor::Tick(float DeltaTime)
 {

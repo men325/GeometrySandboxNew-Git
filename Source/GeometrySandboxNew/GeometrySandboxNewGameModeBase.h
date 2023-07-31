@@ -14,4 +14,6 @@ class GEOMETRYSANDBOXNEW_API AGeometrySandboxNewGameModeBase : public AGameModeB
 {
 	GENERATED_BODY()
 	
+public:
+	AGeometrySandboxNewGameModeBase();
 };
